@@ -1,3 +1,4 @@
+
 void setup() {
   thread("printingtriplestars");
   thread("randomcharacters");
@@ -61,3 +62,5 @@ void randomcharacters()
     counter =  ++counter % rotational.length;
   }
 }
+
+
