@@ -1,0 +1,33 @@
+void setup ()
+{
+  size (1500,1500);
+  frameRate(3);
+}
+
+void draw ()
+{
+  float x = random (0,300);
+  float y = x / 2 ;
+ 
+  background (random(0,102),random(0,170),random(0,255));
+  fill (110 - y ,84 + y,210 - x);
+  rect(97 + x +x,x,100 + y + x,y);
+  colorshift ();
+}
+
+
+void colorshift ()
+{
+ int shift = 100;
+ float rq = random(0,155);
+
+ float move = random (-155,155);
+ float move2 = random (-155,155);
+  
+  fill (random(50,150),random(150,250),random (0,122));
+  rect (400 + move2,400 + move2,shift,shift);
+  rect (600 + move,600 + move2, shift*2,shift*2);
+  fill (shift + rq, 255 - rq, 0 + rq);
+  rect (200+ move,200 + move2, shift,shift);
+  rect (100 + move ,100 + move, shift,shift);
+}
